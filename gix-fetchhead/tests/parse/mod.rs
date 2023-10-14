@@ -55,6 +55,7 @@ fn git_repo_test() -> crate::Result {
             remote: "github.com:git/git".into(),
         },],
     };
+    println!("{:?}\n{test_data:?}", parse(path));
     //assert_eq!(parse(path)?, test_data);
     Ok(())
 }
