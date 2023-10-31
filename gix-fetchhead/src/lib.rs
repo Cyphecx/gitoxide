@@ -13,7 +13,7 @@ pub struct FetchHeadEntry {
     pub merge_status: bool,
 
     //Branch name
-    pub branch: &'static str,
+    pub branch: BString,
 
     //Remote url
     pub remote: BString,
