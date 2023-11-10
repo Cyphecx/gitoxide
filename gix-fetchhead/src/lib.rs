@@ -1,6 +1,7 @@
 #![deny(rust_2018_idioms)]
 #![forbid(unsafe_code)]
 
+use gix_hash::ObjectId;
 use gix_object::bstr::BString;
 
 /// Represents parsed data from the FETCH_HEAD file.
@@ -25,5 +26,18 @@ pub struct FetchHead {
     pub entries: Vec<FetchHeadEntry>,
 }
 
+impl FetchHead {
+
+    pub fn add_entry(&mut self, head: ObjectId, merge_status: bool, branch: BString, remote: BString) {
+        let new_entry = FetchHeadEntry {
+            head,
+            merge_status,
+            branch,
+            remote,
+        };
+        self.entries.push(new_entry);
+    }
+
+}
 pub mod parse;
 pub mod write;

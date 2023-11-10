@@ -24,12 +24,12 @@ pub fn parse(path: impl AsRef<Path>) -> Result<FetchHead, std::io::Error> {
 }
 
 fn parse_entry(str: &str) -> FetchHeadEntry {
-    let tokens: Vec<&str> = str.split("\t").collect();
+    let tokens: Vec<&str> = str.split('\t').collect();
 
     let head: ObjectId = ObjectId::from_hex(tokens[0].as_bytes()).unwrap();
     let merge_status: bool = tokens[1] != "not-for-merge";
-    let sub_tokens: Vec<&str> = tokens[2].split(" ").collect();
-    let branch: BString = sub_tokens[1].to_string().replace("'", "").into();
+    let sub_tokens: Vec<&str> = tokens[2].split(' ').collect();
+    let branch: BString = sub_tokens[1].to_string().replace('\'', "").into();
     let remote: BString = sub_tokens[3].into();
     FetchHeadEntry{
         head,

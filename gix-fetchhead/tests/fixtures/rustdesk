@@ -1,0 +1,4 @@
+45dbea57f1c509875e4340254eeb252c657e15a1		branch 'master' of github.com:rustdesk/rustdesk
+9096c29fef4f01bde555102873d75917a3f5a5ee	not-for-merge	branch 'revert-6257-android-fixes' of github.com:rustdesk/rustdesk
+94f2751902a04deac48af52a186c4614b22b47ff	not-for-merge	branch 'revert-6343-remove_manual_fps' of github.com:rustdesk/rustdesk
+e86d0a0fc14f0bff4cb1ecd94a84eae42818da80	not-for-merge	branch 'sciterjs' of github.com:rustdesk/rustdesk
